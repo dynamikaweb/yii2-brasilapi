@@ -27,7 +27,8 @@
     },
     "require": {
         "php": ">=7.0",
-        "yiisoft/yii2": "*"
+        "yiisoft/yii2": "*",
+        "curl/curl": "^2.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": false,
