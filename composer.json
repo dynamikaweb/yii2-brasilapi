@@ -1,11 +1,13 @@
 {
-    "name": "dynamikaweb/yii2-template",
-    "description": "",
+    "name": "dynamikaweb/yii2-cep-brasilapi",
+    "description": "yii2 widget for zip code queries from Brazil, using BrasilApi resources",
     "type": "yii2-extension",
     "keywords": [
         "dynamika",
         "yii",
-        "yii2"
+        "yii2",
+        "Cep",
+        "BrasilApi",
     ],
     "license": "BSD-3-Clause",
     "authors": [
@@ -21,8 +23,8 @@
         }
     ],
     "support": {
-        "issues": "http://github.com/dynamikaweb/yii2-template/issues",
-        "source": "http://github.com/dynamikaweb/yii2-template"
+        "issues": "http://github.com/dynamikaweb/yii2-cep-brasilapi/issues",
+        "source": "http://github.com/dynamikaweb/yii2-cep-brasilapi"
     },
     "require": {
         "php": ">=7.0",
@@ -32,7 +34,7 @@
     "prefer-stable": false,
     "autoload": {
         "psr-4": {
-            "dynamikaweb\\": "src"
+            "dynamikaweb\\cep\\": "src"
         }
     }
 }
