@@ -39,7 +39,7 @@
                     if (input.length) {
                         if (prop in data) {
                             input.val(data[prop]);
-                            input.parent().trigger('change');
+                            input.trigger('change');
                         } else {
                             input.val('');
                         }
