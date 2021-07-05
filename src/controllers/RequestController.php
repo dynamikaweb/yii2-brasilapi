@@ -16,8 +16,15 @@ class RequestController extends Controller
 {
     const URL_API_BRASIL = 'https://brasilapi.com.br/api/';
 
+    public function beforeAction($action)
+    {
+        $this->enableCsrfValidation = false;
+        return parent::beforeAction($action);
+    }
+
     public function actionIndex($route)
     {
+
         $url = self::URL_API_BRASIL . $route;
 
         $curl = new Curl();
