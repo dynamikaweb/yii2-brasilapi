@@ -37,7 +37,7 @@ add the rule to your urlManager component and also add modules
         'urlManager' => [
             ...
             'rules' => [
-                '/brasilapi/<route:[a-zA-Z0-9\/-]+>' => 'brasilapi/request/index',
+                'brasilapi/<route:[a-zA-Z0-9\/-]+>' => 'brasilapi/request/index',
             ]
         ]
     ],
