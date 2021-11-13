@@ -18,12 +18,12 @@
             this.template = options.template;
             var that = this;
 
-            this.element.on('change', function(){
-                
+            this.element.on('change', function () {
+
                 that.search($(this), true);
             });
 
-            this.element.on('keydown', function(e){
+            this.element.on('keydown', function (e) {
                 if (e.which == '13') {
                     e.preventDefault();
                     that.search($(this), true);
@@ -52,7 +52,7 @@
         search: function ($button, cep) {
             var val = this.element.val(),
                 template = this.template;
-                that = this;
+            that = this;
 
             if (!val) {
                 return;
@@ -60,28 +60,28 @@
             val = val.replace(/[^0-9]/g, '');
 
             if (val) {
-                var action = this.action + val;
-                
+                var action = this.action + '/' + val;
+
                 $.ajax({
                     url: action,
                     type: 'POST',
                     contentType: false,
                     cache: false,
-                    processData:false,
+                    processData: false,
                     dataType: 'json',
-                    beforeSend: function(){
+                    beforeSend: function () {
                         $.LoadingOverlay("show");
                     },
-                    success: function(result) {
+                    success: function (result) {
                         if (result.success) {
                             that._assign(result.data);
                         }
                         return false;
                     },
-                    error: function(error) {
+                    error: function (error) {
                     },
-                    complete: function() {
-                        if(template == 'materialize'){
+                    complete: function () {
+                        if (template == 'materialize') {
                             M.updateTextFields();
                             $('select').formSelect();
                         }
@@ -92,8 +92,8 @@
         }
     };
 
-    $.fn.cep = function(options){
-        return this.each(function(){
+    $.fn.cep = function (options) {
+        return this.each(function () {
             var elem = $(this),
                 data = elem.data('cep');
 

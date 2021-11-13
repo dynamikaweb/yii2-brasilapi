@@ -40,7 +40,7 @@ class CepWidget extends InputWidget
         'state' => '',
     ];
 
-    public $action = '/brasilapi/cep/v2/';
+    public $action = 'brasilapi/cep/v2/';
 
     public $template;
 
@@ -77,7 +77,7 @@ class CepWidget extends InputWidget
         $this->hashPluginOptions($id);
         $options = Json::encode([
             'fields' => $this->fields,
-            'action' => Url::to($this->action),
+            'action' => Url::toRoute($this->action),
             'template' => $this->template
         ]);
 
